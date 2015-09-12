@@ -3,13 +3,15 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+"disable scrollbars, menu and toolbar from gvim
 set guioptions-=T
 set guioptions-=m
 set guioptions-=L
 set guioptions-=r
-"set gfn=Droid\ Sans\ Mono\ 14
+"make Monaco the default font
 set gfn=Monaco\ for\ Powerline\ 14
 
+"VimPlug plugins enabled
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-pathogen'
@@ -32,6 +34,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
 call plug#end()
 
+"theme configuration
 syntax enable
 let g:solarized_termcolors=256
 set background=dark
@@ -46,7 +49,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'nolinkyet',
   \ }
-
 
 " disable markdown automatic folding
 let g:vim_markdown_folding_disabled=1
