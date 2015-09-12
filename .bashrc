@@ -89,6 +89,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias nautilus='nautilus --no-desktop'
+#open mongo db setting the database dir
 alias mongod='mongod --dbpath="/home/francisco/apps/data/db"'
 
 # Add an "alert" alias for long running commands.  Use like so:
