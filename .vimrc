@@ -29,6 +29,7 @@ Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
 Plug 'plasticboy/vim-markdown'
 Plug 'flazz/vim-colorschemes'
+Plug 'xolox/vim-colorscheme-switcher'
 call plug#end()
 
 syntax enable
@@ -37,7 +38,7 @@ set background=dark
 colorscheme solarized
 
 let NERDTreeShowBookmarks=1
-
+let NERDTreeChDirMode=2
 map <C-n> :NERDTreeToggle<CR>
 
 let g:ctrlp_custom_ignore = {
