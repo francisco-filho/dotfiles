@@ -27,11 +27,12 @@ Plug 'kien/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'rking/ag.vim'
 Plug 'marijnh/tern_for_vim'
-Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
-Plug 'plasticboy/vim-markdown'
+Plug 'prurigro/vim-markdown-concealed'
 Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 "theme configuration
@@ -40,8 +41,12 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
+"show bookmarks on open
 let NERDTreeShowBookmarks=1
+"change vim dir when root dir is changed
 let NERDTreeChDirMode=2
+"open nerdtree on the right
+let g:NERDTreeWinPos = "right"
 map <C-n> :NERDTreeToggle<CR>
 
 let g:ctrlp_custom_ignore = {
@@ -52,3 +57,24 @@ let g:ctrlp_custom_ignore = {
 
 " disable markdown automatic folding
 let g:vim_markdown_folding_disabled=1
+
+if !exists('g:airline_symbols')
+      let g:airline_symbols = {}
+  endif
+let g:airline_symbols.space = "\ua0"
+let g:airline_symbols.branch = '⭠'
+
+"<ctrl+enter> go to new line
+imap <C-CR> <C-o>$<CR>
+
+"<ctrl+shifit+enter> go to new line and append line
+imap <C-S-CR> <C-o>A;<CR>
+
+"leader key re-map to space
+let mapleader = " "
+
+"eclim + ycm
+let g:EclimCompletionMethod = 'omnifunc'
+
+"comment lines in normal mode
+nmap <leader>c <c-_><c-_>
