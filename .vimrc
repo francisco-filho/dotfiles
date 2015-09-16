@@ -9,7 +9,7 @@ set guioptions-=m
 set guioptions-=L
 set guioptions-=r
 "make Monaco the default font
-set gfn=Monaco\ for\ Powerline\ 14
+set gfn=Monaco\ for\ Powerline\ 10
 
 "VimPlug plugins enabled
 call plug#begin()
@@ -17,7 +17,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-pathogen'
 Plug 'Raimondi/delimitMate'
 Plug 'digitaltoad/vim-jade'
-Plug 'elzr/vim-json'
+Plug 'helino/vim-json'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/syntastic'
 Plug 'bling/vim-airline'
@@ -32,7 +32,9 @@ Plug 'prurigro/vim-markdown-concealed'
 Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'tomtom/tcomment_vim'
+Plug 'vim-scripts/dbext.vim'
 Plug 'tpope/vim-surround'
+Plug 'tfnico/vim-gradle'
 call plug#end()
 
 "theme configuration
@@ -71,10 +73,19 @@ imap <C-CR> <C-o>$<CR>
 imap <C-S-CR> <C-o>A;<CR>
 
 "leader key re-map to space
-let mapleader = " "
+"let mapleader = " "
 
 "eclim + ycm
 let g:EclimCompletionMethod = 'omnifunc'
 
 "comment lines in normal mode
 nmap <leader>c <c-_><c-_>
+
+let g:dbext_default_profile_portal = 'type=PGSQL:user=francisco:passwd=12345678:host=localhost:dbname=portal' 
+let g:dbext_default_profile = 'portal'
+
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
+imap <C-cr> <C-o>$<cr>
