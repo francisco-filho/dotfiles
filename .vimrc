@@ -35,6 +35,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'vim-scripts/dbext.vim'
 Plug 'tpope/vim-surround'
 Plug 'tfnico/vim-gradle'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 "theme configuration
