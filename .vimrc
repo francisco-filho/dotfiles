@@ -17,7 +17,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-pathogen'
 Plug 'Raimondi/delimitMate'
 Plug 'digitaltoad/vim-jade'
-Plug 'helino/vim-json'
+Plug 'elzr/vim-json'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/syntastic'
 Plug 'bling/vim-airline'
@@ -39,8 +39,10 @@ call plug#end()
 
 "theme configuration
 syntax enable
-let g:solarized_termcolors=256
 set background=dark
+"solarized options 
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
 colorscheme solarized
 
 "show bookmarks on open
