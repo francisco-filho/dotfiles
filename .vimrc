@@ -9,7 +9,7 @@ set guioptions-=m
 set guioptions-=L
 set guioptions-=r
 "make Monaco the default font
-set gfn=Monaco\ for\ Powerline\ 10
+set gfn=Monaco\ for\ Powerline\ 12
 
 "VimPlug plugins enabled
 call plug#begin()
@@ -36,6 +36,8 @@ Plug 'vim-scripts/dbext.vim'
 Plug 'tpope/vim-surround'
 Plug 'tfnico/vim-gradle'
 Plug 'easymotion/vim-easymotion'
+Plug 'ryanoasis/vim-devicons'
+Plug 'rstacruz/sparkup'
 call plug#end()
 
 "theme configuration
