@@ -9,7 +9,8 @@ set guioptions-=m
 set guioptions-=L
 set guioptions-=r
 "make Monaco the default font
-set gfn=Monaco\ for\ Powerline\ 12
+"set gfn=Monaco\ for\ Powerline\ 12
+set gfn=Fira\ Mono\ 13
 
 "VimPlug plugins enabled
 call plug#begin()
@@ -46,7 +47,8 @@ set background=dark
 "solarized options 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme solarized
+colorscheme gruvbox
+se t_Co=256
 
 "show bookmarks on open
 let NERDTreeShowBookmarks=1
