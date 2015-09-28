@@ -36,6 +36,7 @@ Plug 'vim-scripts/dbext.vim'
 Plug 'tpope/vim-surround'
 Plug 'tfnico/vim-gradle'
 Plug 'easymotion/vim-easymotion'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 "theme configuration
@@ -44,7 +45,8 @@ set background=dark
 "solarized options 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme solarized
+colorscheme gruvbox
+
 
 "show bookmarks on open
 let NERDTreeShowBookmarks=1
