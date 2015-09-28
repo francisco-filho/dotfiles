@@ -9,7 +9,8 @@ set guioptions-=m
 set guioptions-=L
 set guioptions-=r
 "make Monaco the default font
-set gfn=Monaco\ for\ Powerline\ 10
+"set gfn=Monaco\ for\ Powerline\ 12
+set gfn=Fira\ Mono\ 13
 
 "VimPlug plugins enabled
 call plug#begin()
@@ -37,6 +38,8 @@ Plug 'tpope/vim-surround'
 Plug 'tfnico/vim-gradle'
 Plug 'easymotion/vim-easymotion'
 Plug 'morhetz/gruvbox'
+Plug 'ryanoasis/vim-devicons'
+Plug 'rstacruz/sparkup'
 call plug#end()
 
 "theme configuration
@@ -46,7 +49,7 @@ set background=dark
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme gruvbox
-
+se t_Co=256
 
 "show bookmarks on open
 let NERDTreeShowBookmarks=1
