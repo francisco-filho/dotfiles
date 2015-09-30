@@ -10,7 +10,7 @@ set guioptions-=L
 set guioptions-=r
 "make Monaco the default font
 "set gfn=Monaco\ for\ Powerline\ 12
-set gfn=Fira\ Mono\ 13
+set gfn=Fira\ Mono\ 10
 
 "VimPlug plugins enabled
 call plug#begin()
@@ -40,6 +40,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
 Plug 'rstacruz/sparkup'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 "theme configuration
