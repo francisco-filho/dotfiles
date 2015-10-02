@@ -10,7 +10,7 @@ set guioptions-=L
 set guioptions-=r
 "make Monaco the default font
 "set gfn=Monaco\ for\ Powerline\ 12
-set gfn=Fira\ Mono\ 10
+set gfn=Fira\ Mono\ 12
 
 "VimPlug plugins enabled
 call plug#begin()
@@ -29,7 +29,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'rking/ag.vim'
 Plug 'marijnh/tern_for_vim'
 Plug 'xolox/vim-misc'
-Plug 'prurigro/vim-markdown-concealed'
+"Plug 'prurigro/vim-markdown-concealed'
+Plug 'plasticboy/vim-markdown'
 Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'tomtom/tcomment_vim'
@@ -40,8 +41,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
 Plug 'rstacruz/sparkup'
-Plug 'nelstrom/vim-markdown-folding'
 Plug 'Yggdroot/indentLine'
+Plug 'nelstrom/vim-markdown-folding'
 call plug#end()
 
 "theme configuration
@@ -68,7 +69,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " disable markdown automatic folding
-"let g:vim_markdown_folding_disabled=0
+let g:vim_markdown_folding_disabled=1
 
 if !exists('g:airline_symbols')
       let g:airline_symbols = {}
