@@ -29,7 +29,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'rking/ag.vim'
 Plug 'marijnh/tern_for_vim'
 Plug 'xolox/vim-misc'
-"Plug 'prurigro/vim-markdown-concealed'
 Plug 'plasticboy/vim-markdown'
 Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
@@ -84,7 +83,7 @@ imap <C-CR> <C-o>$<CR>
 imap <C-S-CR> <C-o>A;<CR>
 
 "leader key re-map to space
-"let mapleader = " "
+let mapleader = ","
 
 "eclim + ycm
 let g:EclimCompletionMethod = 'omnifunc'
