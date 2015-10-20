@@ -108,3 +108,9 @@ endif
 "conceal level of vim-json
 let g:vim_json_syntax_concealcursor=""
 let g:vim_json_syntax_conceal = 0
+
+"ctrl+p exclude pattern
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|node_modules)$',
+  \ 'file': '\v\.(exe|so|dll)$'
+  \ }
