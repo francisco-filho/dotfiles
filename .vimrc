@@ -42,6 +42,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'rstacruz/sparkup'
 Plug 'Yggdroot/indentLine'
 Plug 'nelstrom/vim-markdown-folding'
+Plug 'wavded/vim-stylus'
 call plug#end()
 
 "theme configuration
@@ -103,3 +104,7 @@ imap <C-cr> <C-o>$<cr>
 if has("autocmd")
       filetype plugin indent on
 endif
+
+"conceal level of vim-json
+let g:vim_json_syntax_concealcursor=""
+let g:vim_json_syntax_conceal = 0
