@@ -125,7 +125,7 @@ font:
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
     #family: monospace
-        family: mononoki Nerd Font Mono
+    #family: mononoki Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
         style: Bold
@@ -153,7 +153,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 18.0
+  size: 16.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -179,60 +179,57 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-
 colors:
+  # Default colors
   primary:
-    background: '0x282a36'
-    foreground: '0xf8f8f2'
-  cursor:
-    text: CellBackground
-    cursor: CellForeground
-  vi_mode_cursor:
-    text: CellBackground
-    cursor: CellForeground
-  search:
-    matches:
-      foreground: '0x44475a'
-      background: '0x50fa7b'
-    focused_match:
-      foreground: '0x44475a'
-      background: '0xffb86c'
-    bar:
-      background: '0x282a36'
-      foreground: '0xf8f8f2'
-  line_indicator:
-    foreground: None
-    background: None
+    background: '0x282c34'
+    foreground: '0xbbc2cf'
+
+    # Bright and dim foreground colors
+    #
+    # The dimmed foreground color is calculated automatically if it is not present.
+    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+    # is `false`, the normal foreground color will be used.
+    #dim_foreground: '0x9a9a9a'
+    #bright_foreground: '0xffffff'
+
+  # Cursor colors
+  #
+  # Colors which should be used to draw the terminal cursor. If these are unset,
+  # the cursor color will be the inverse of the cell color.
+  #cursor:
+  #  text: '0x000000'
+  #  cursor: '0xffffff'
+
+  # Selection colors
+  #
+  # Colors which should be used to draw the selection area. If selection
+  # background is unset, selection color will be the inverse of the cell colors.
+  # If only text is unset the cell text color will remain the same.
   selection:
-    text: CellForeground
-    background: '0x44475a'
+    text: '0xbbc2cf'
+
+  # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xff5555'
-    green:   '0x50fa7b'
-    yellow:  '0xf1fa8c'
-    blue:    '0xbd93f9'
-    magenta: '0xff79c6'
-    cyan:    '0x8be9fd'
-    white:   '0xbfbfbf'
+    black:   '0x1c1f24'
+    red:     '0xff6c6b'
+    green:   '0x98be65'
+    yellow:  '0xda8548'
+    blue:    '0x51afef'
+    magenta: '0xc678dd'
+    cyan:    '0x5699af'
+    white:   '0x202328'
+
+  # Bright colors
   bright:
-    black:   '0x4d4d4d'
-    red:     '0xff6e67'
-    green:   '0x5af78e'
-    yellow:  '0xf4f99d'
-    blue:    '0xcaa9fa'
-    magenta: '0xff92d0'
-    cyan:    '0x9aedfe'
-    white:   '0xe6e6e6'
-  dim:
-    black:   '0x14151b'
-    red:     '0xff2222'
-    green:   '0x1ef956'
-    yellow:  '0xebf85b'
-    blue:    '0x4d5b86'
-    magenta: '0xff46b0'
-    cyan:    '0x59dffc'
-    white:   '0xe6e6d1'
+    black:   '0x5b6268'
+    red:     '0xda8548'
+    green:   '0x4db5bd'
+    yellow:  '0xecbe7b'
+    blue:    '0x3071db'   # This is 2257a0 in Doom Emacs but I lightened it.
+    magenta: '0xa9a1e1'
+    cyan:    '0x46d9ff'
+    white:   '0xdfdfdf'
 
 
 # Bell
