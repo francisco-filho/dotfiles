@@ -11,5 +11,6 @@ Config { font = "xft:Noto Sans Mono-11:Normal"
     ]
     , sepChar = "%"
     , alignSep = "}{"
-    , template = "%StdinReader% }{ <fc=#98be65>%cpu%</fc> | <fc=#ff6c6b>%memory%</fc> | <fc=#ee9a00>%date%</fc>"
+    --, template = "%StdinReader% }{ <fc=#98be65>%cpu%</fc> | <fc=#ff6c6b>%memory%</fc> | <fc=#ee9a00>%date%</fc>"
+    , template = "%StdinReader% }{ <box type=Bottom color=#ffea00><fc=#08cee1>%cpu%</fc></box> <box type=Bottom color=#ffea00><fc=#ccc>%memory%</fc></box> <box type=Bottom color=#ffea00><fc=#08cee1>%date%</fc></box> "
     }
