@@ -35,6 +35,7 @@ myManageHook = composeAll
     , className =? "nm-connection-editor" --> doFloat
     , className =? "Nm-connection-editor" --> doFloat
     , className =? "Pavucontrol" --> doFloat
+    , className =? "Gnome-calculator" --> doFloat
     , manageDocks
     ]
 

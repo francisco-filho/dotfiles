@@ -1,0 +1,20 @@
+# theme
+export GTK_THEME="Adwaita:dark"
+
+# keyboard
+setxkbmap br &
+numlockx &
+
+# Wallpaper
+nitrogen --restore &
+
+# Compositor
+picom &
+
+# posicao monitor
+xrandr --output HDMI-2 --left-of DP-1
+
+
+# audio (iniciando no xmonad)
+#pulseaudio --start &
+#start-pulseaudio-x11 &

@@ -31,6 +31,7 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'rktjmp/lush.nvim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'morhetz/gruvbox'
+Plug 'jpalardy/vim-slime'
 call plug#end()
 
 
@@ -80,3 +81,7 @@ au BufNewFile,BufRead *.py
 
 " latex
 let g:vim_markdown_math = 1
+
+" slime
+let g:slime_target = "tmux"
+let g:slime_python_ipython = 1
