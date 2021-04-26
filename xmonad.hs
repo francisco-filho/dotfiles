@@ -26,13 +26,10 @@ myTitleColor = "#80cee1"
 myBorderWidth = 2
 gapSize = 16
 
-myWorkspaces = ["1", "2", "3","4","5","6","7","8","9", "0"]
-myLayout = spacingRaw False (Border 30 0 0 gapSize) True (Border 0 gapSize gapSize 0) True $ avoidStruts $ layoutHook defaultConfig
+myWorkspaces = ["term", "2", "3","4","5","6","7","8","9", "0"]
 
 myManageHook = composeAll
-    [ className =? "Gimp" --> doFloat
-    , className =? "Vncviewer" --> doFloat
-    , className =? "nm-connection-editor" --> doFloat
+    [ className =? "Pavucontrol" --> doFloat
     , className =? "Nm-connection-editor" --> doFloat
     , className =? "Pavucontrol" --> doFloat
     , className =? "Gnome-calculator" --> doFloat
@@ -49,27 +46,24 @@ main = do
     xmproc <- spawnPipe "xmobar -x 0 $HOME/dotfiles/xmobarrc0"
     xmproc1 <- spawnPipe "xmobar -x 1 $HOME/dotfiles/xmobarrc1"
     xmonad $ ewmh desktopConfig { 
-        manageHook = insertPosition Below Newer <+> myManageHook <+> manageHook defaultConfig
+        --manageHook = insertPosition Below Newer <+> myManageHook <+> manageHook defaultConfig
+        manageHook = myManageHook <+> manageHook defaultConfig
         , modMask = mod4Mask
         , terminal = myTerminal
         , XMonad.workspaces = myWorkspaces
-            , startupHook = myStartupHook
+        , startupHook = myStartupHook
         , borderWidth = myBorderWidth
         , focusedBorderColor = myBorderColor
-        , layoutHook = myLayout2
+        , layoutHook = myLayout
     	, logHook = dynamicLogWithPP xmobarPP
             { ppOutput = \x -> hPutStrLn xmproc x >> hPutStrLn xmproc1 x
             , ppTitle = xmobarColor myTitleColor "" . shorten 100
             }
         } `additionalKeysP` myKeys
-        --[ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
-        --, ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
-        --, ((0, xK_Print), spawn "scrot")
-        --]
 
 
 myKeys :: [(String, X ())]
-myKeys = [("M-1", windows (viewOnScreen screenLeft "1"))
+myKeys = [("M-1", windows (viewOnScreen screenLeft "term"))
     , ("M-2", windows (viewOnScreen screenLeft "2"))
     , ("M-3", windows (viewOnScreen screenLeft "3"))
     , ("M-4", windows (viewOnScreen screenLeft "4"))
@@ -83,12 +77,15 @@ myKeys = [("M-1", windows (viewOnScreen screenLeft "1"))
     --, ("M-p", spawn "dmenu_run -fn 'xft:Noto Sans Mono-13:Normal' -m " ++ gets (screen . current))
     , ("M-p", spawn "dmenu_run -fn 'xft:Noto Sans Mono-13:Normal'")
     , ("M-f", spawn "firefox")
+    , ("M-v", spawn "virt-manager")
+    , ("M-i d", spawn "redshift -x")
+    , ("M-i n", spawn "redshift -P -O 2000")
     , ("M-<Print>", spawn "flameshot gui")
     --, ("M-u", sendMessage ToggleStruts)
     ]
 
 
-myLayout2 = avoidStruts (full ||| tiled ||| grid)
+myLayout = avoidStruts (full ||| tiled ||| grid)
 	where
 		full = renamed [Replace "Full"]
 			$ noBorders (Full)
