@@ -32,6 +32,7 @@ Plug 'rktjmp/lush.nvim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'morhetz/gruvbox'
 Plug 'jpalardy/vim-slime'
+Plug 'chrisbra/Colorizer'
 call plug#end()
 
 
@@ -57,6 +58,7 @@ syntax on
 colorscheme gruvbox
 let g:gruvbox_contrast_dark="hard"
 hi Normal guibg=NONE ctermbg=NONE
+set termguicolors
 "hi Normal ctermbg=NONE
 "remaps
 "
@@ -65,6 +67,10 @@ noremap <C-J> <C-W><C-J>
 noremap <C-K> <C-W><C-K>
 noremap <C-L> <C-W><C-L>
 noremap <C-H> <C-W><C-H>
+
+" leader
+let mapleader = ","
+
 
 "NerdTree
 let g:NERDTreeWinPos = "right"
@@ -85,3 +91,5 @@ let g:vim_markdown_math = 1
 " slime
 let g:slime_target = "tmux"
 let g:slime_python_ipython = 1
+xmap <leader>e <Plug>SlimeRegionSend
+nmap <leader>e <Plug>SlimeParagraphSend
