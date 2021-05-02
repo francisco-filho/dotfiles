@@ -22,13 +22,13 @@ Config { font    = "xft:JetBrainsMono Nerd Font:pixelsize=16:antialias=true:hint
     , Run Network "enp4s0" ["-t", "\xf0ab <rx>kb  \xf0aa <tx>kb"] 20
 
     -- Cpu usage in percent
-    , Run Cpu ["-t", "\xf108  cpu: (<total>%)","-H","50","--high","red"] 20
+    , Run Cpu ["-t", "\xf108  cpu (<total>%)","-H","50","--high","red"] 20
 
     -- Ram used number and percent
-    , Run Memory ["-t", "\xf233  mem: <used>M (<usedratio>%)"] 20
+    , Run Memory ["-t", "\xf233  mem <used>M (<usedratio>%)"] 20
 
     -- Disk space free
-    , Run DiskU [("/home", "\xf0c7  free: <free>,"), ("/desenv", "<free>")] [] 60
+    , Run DiskU [("/home", "\xf0c7  free <free>,"), ("/desenv", "<free>")] [] 60
 
     -- Runs a standard shell command 'uname -r' to get kernel version
     , Run Com "uname" ["-r"] "" 36000

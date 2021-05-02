@@ -58,7 +58,7 @@ main = do
         , layoutHook = myLayout
     	, logHook = dynamicLogWithPP xmobarPP
             { ppOutput = \x -> hPutStrLn xmproc x >> hPutStrLn xmproc1 x
-            , ppTitle = xmobarColor myTitleColor "" . shorten 100
+            , ppTitle = xmobarColor myTitleColor "" . shorten 80
             }
         } `additionalKeysP` myKeys
 
@@ -82,6 +82,7 @@ myKeys = [("M-1", windows (viewOnScreen screenLeft "term"))
     , ("M-i d", spawn "redshift -x")
     , ("M-i n", spawn "redshift -P -O 2000")
     , ("M-<Print>", spawn "flameshot gui")
+    , ("M-<Pause>", spawn "xscreensaver-command -lock")
     --, ("M-u", sendMessage ToggleStruts)
     ]
 
