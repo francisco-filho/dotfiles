@@ -24,7 +24,7 @@ myTerminal = "alacritty"
 myBorderColor = "#1a73e8"
 myTitleColor = "#80cee1"
 myBorderWidth = 2
-gapSize = 24
+gapSize = 48
 
 myWorkspaces = ["term", "2", "3","4","5","6","7","8","9", "0"]
 
@@ -80,7 +80,8 @@ myKeys = [("M-1", windows (viewOnScreen screenLeft "term"))
     , ("M-f", spawn "firefox")
     , ("M-v", spawn "virt-manager")
     , ("M-i d", spawn "redshift -x")
-    , ("M-i n", spawn "redshift -P -O 2000")
+    , ("M-i a", spawn "redshift -P -O 2000")
+    , ("M-i n", spawn "redshift -P -O 1750")
     , ("M-<Print>", spawn "flameshot gui")
     , ("M-<Pause>", spawn "xscreensaver-command -lock")
     --, ("M-u", sendMessage ToggleStruts)
