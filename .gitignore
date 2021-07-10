@@ -1,3 +1,5 @@
+.metals
+.vscode
 *.swp
 *.swo
 node_modules

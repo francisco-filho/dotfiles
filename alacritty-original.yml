@@ -112,7 +112,8 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     #family: mononoki Nerd Font Mono
-        family: Consolas
+    #family: Consolas
+        family: Inconsolata Nerd Font Mono
         #family: JetBrainsMono Nerd Font
         #family: Mononoki Nerd Font Mono
         #family: Fira Mono Nerd Font
@@ -155,7 +156,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 16.0
+  size: 20.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -279,7 +280,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1
+background_opacity: .9
 
 #selection:
   # This string contains all characters that are used as separators for
@@ -329,7 +330,7 @@ background_opacity: 1
   #thickness: 0.15
 
 # Live config reload (changes require restart)
-#live_config_reload: true
+live_config_reload: true
 
 # Shell
 #
@@ -342,7 +343,7 @@ background_opacity: 1
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 #shell:
-#  program: /bin/bash
+#   program: /usr/bin/zsh
 #  args:
 #    - --login
 
