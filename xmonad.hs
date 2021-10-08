@@ -39,6 +39,7 @@ myManageHook = composeAll
 
 myStartupHook = do
     spawnOnce "nm-applet &"
+    spawnOnce "/usr/bin/python3 /usr/bin/blueman-tray"
     spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --transparent true --alpha 60 --tint 0x282c34  --height 22 --monitor 1 --expand true & "
     windows (viewOnScreen screenLeft "1")
     windows (viewOnScreen screenRight "7")

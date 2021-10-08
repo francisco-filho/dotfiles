@@ -1,5 +1,6 @@
 env:
   TERM: xterm-256color
+startup_mode: Fullscreen
 window:
   padding:
     x: 0
@@ -7,20 +8,26 @@ window:
   decorations: full
 font:
   normal:
-        family: Inconsolata Nerd Font Mono
-        style: Regular
+    #family: Inconsolata Nerd Font Mono
+    #family: Consolas
+    #family: JetBrainsMono Nerd Font
+    #family: SauceCodePro Nerd Font Mono
+    #family: Lekton Nerd Font Mono
+    #family: Monoid Nerd Font Mono
+        family: Fira Code Nerd Font Mono
+        style: Light
   bold:
         style: Bold
-  size: 20.0
+  size: 22.0
 draw_bold_text_with_bright_colors: true
-background_opacity: .9
+background_opacity: .85
 live_config_reload: true
 # colors
 # Colors (Dracula)
 colors:
   # Default colors
   primary:
-    background: '#282a36'
+    background: '#111111'
     foreground: '#f8f8f2'
 
   # Normal colors
