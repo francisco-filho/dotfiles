@@ -18,13 +18,13 @@ import XMonad.Util.EZConfig(additionalKeysP)
 import System.IO
 import XMonad.StackSet
 
-screenLeft = 1
+screenLeft = 0
 screenRight = 0
 myTerminal = "alacritty"
 myBorderColor = "#1a73e8"
 myTitleColor = "#80cee1"
 myBorderWidth = 2
-gapSize = 32
+gapSize = 16
 
 myWorkspaces = ["term", "2", "3","4","5","6","7","8","9", "0"]
 
@@ -42,11 +42,11 @@ myStartupHook = do
     spawnOnce "/usr/bin/python3 /usr/bin/blueman-tray"
     spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --transparent true --alpha 60 --tint 0x282c34  --height 22 --monitor 1 --expand true & "
     windows (viewOnScreen screenLeft "1")
-    windows (viewOnScreen screenRight "7")
+    --windows (viewOnScreen screenRight "7")
 
 main = do
     xmproc <- spawnPipe "xmobar -x 0 $HOME/dotfiles/xmobarrc0"
-    xmproc1 <- spawnPipe "xmobar -x 1 $HOME/dotfiles/xmobarrc1"
+    --xmproc1 <- spawnPipe "xmobar -x 1 $HOME/dotfiles/xmobarrc1"
     xmonad $ ewmh desktopConfig { 
         --manageHook = insertPosition Below Newer <+> myManageHook <+> manageHook defaultConfig
         manageHook = myManageHook <+> manageHook defaultConfig
@@ -58,7 +58,8 @@ main = do
         , focusedBorderColor = myBorderColor
         , layoutHook = myLayout
     	, logHook = dynamicLogWithPP xmobarPP
-            { ppOutput = \x -> hPutStrLn xmproc x >> hPutStrLn xmproc1 x
+            --{ ppOutput = \x -> hPutStrLn xmproc x >> hPutStrLn xmproc1 x
+            { ppOutput = \x -> hPutStrLn xmproc x 
             , ppTitle = xmobarColor myTitleColor "" . shorten 80
             }
         } `additionalKeysP` myKeys
