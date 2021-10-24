@@ -13,6 +13,7 @@ let mapleader = " "
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 inoremap kj <Esc>
+map <C-m> :
 
 call plug#begin()
 Plug 'tpope/vim-fugitive'
@@ -37,6 +38,8 @@ Plug 'kyazdani42/nvim-web-devicons'
 " themes
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'romgrk/doom-one.vim'
 call plug#end()
 
 let g:gruvbox_italic=1
@@ -220,7 +223,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <leader>tt :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 let g:NERDTreeWinPos = "right"
