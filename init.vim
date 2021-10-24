@@ -1,5 +1,5 @@
 set number
-set relativenumber
+"set relativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab 
@@ -29,11 +29,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
-Plug 'nvim-telescope/telescope.nvim'
 "Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 "Plug 'nvim-lualine/lualine.nvim'
-Plug 'lewis6991/gitsigns.nvim'
+"Plug 'lewis6991/gitsigns.nvim'
+Plug 'airblade/vim-gitgutter'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'tpope/vim-commentary'
 "Plug 'romgrk/barbar.nvim'
 " themes
 Plug 'morhetz/gruvbox'
@@ -250,9 +251,9 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
-lua << END
-require('gitsigns').setup()
-END
+"lua << END
+"require('gitsigns').setup()
+"END
 
 "telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
