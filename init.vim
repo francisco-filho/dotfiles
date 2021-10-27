@@ -1,5 +1,4 @@
 set number
-set relativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab 
@@ -12,6 +11,7 @@ set splitright
 let mapleader = " "
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>l <C-w>
 inoremap kj <Esc>
 map <C-m> :
 
@@ -30,6 +30,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'plasticboy/vim-markdown'
 "Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 "Plug 'nvim-lualine/lualine.nvim'
 Plug 'lewis6991/gitsigns.nvim'
@@ -43,7 +44,7 @@ Plug 'romgrk/doom-one.vim'
 call plug#end()
 
 let g:gruvbox_italic=1
-colorscheme gruvbox
+colorscheme doom-one
 "hi Normal guibg=NONE ctermbg=NONE
 set termguicolors
 
