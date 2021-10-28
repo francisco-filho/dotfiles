@@ -5,6 +5,7 @@ set expandtab
 set encoding=utf-8
 set cursorline
 set colorcolumn=100
+set mouse=a
 
 set splitright
 
@@ -13,6 +14,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>l <C-w>
 inoremap kj <Esc>
+inoremap CC <Esc>bc$
 map <C-m> :
 
 call plug#begin()
@@ -35,12 +37,14 @@ Plug 'plasticboy/vim-markdown'
 "Plug 'nvim-lualine/lualine.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'junegunn/limelight.vim'
 "Plug 'romgrk/barbar.nvim'
 " themes
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'romgrk/doom-one.vim'
+Plug 'junegunn/seoul256.vim'
 call plug#end()
 
 let g:gruvbox_italic=1
