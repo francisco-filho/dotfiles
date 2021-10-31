@@ -16,6 +16,7 @@ nnoremap <leader>l <C-w>
 inoremap kj <Esc>
 inoremap CC <Esc>bc$
 map <C-m> :
+map <C-;> :bnext<CR>
 
 call plug#begin()
 Plug 'tpope/vim-fugitive'
