@@ -13,10 +13,11 @@ let mapleader = " "
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>l <C-w>
+nnoremap <leader>bd :bd<CR>
+nnoremap <C-i> :bn<CR>
 inoremap kj <Esc>
 inoremap CC <Esc>bc$
 map <C-m> :
-map <C-;> :bnext<CR>
 
 call plug#begin()
 Plug 'tpope/vim-fugitive'
