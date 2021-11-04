@@ -45,7 +45,7 @@ myStartupHook = do
     --windows (viewOnScreen screenRight "7")
 
 main = do
-    xmproc <- spawnPipe "xmobar -x 0 $HOME/dotfiles/xmobarrc0"
+    xmproc <- spawnPipe "xmobar -x 0 $HOME/.xmobarrc0"
     --xmproc1 <- spawnPipe "xmobar -x 1 $HOME/dotfiles/xmobarrc1"
     xmonad $ ewmh desktopConfig { 
         --manageHook = insertPosition Below Newer <+> myManageHook <+> manageHook defaultConfig
