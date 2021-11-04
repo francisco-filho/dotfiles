@@ -44,11 +44,13 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'romgrk/doom-one.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
-let g:vscode_style = "dark"
+" set background="dark"
+let g:vscode_style="dark"
 let g:gruvbox_italic=1
-colorscheme doom-one
+colorscheme gruvbox
 "hi Normal guibg=NONE ctermbg=NONE
 set termguicolors
 
