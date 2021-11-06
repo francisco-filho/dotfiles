@@ -1,19 +1,15 @@
 set number
-"set relativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab 
 set encoding=utf-8
 set cursorline
 set colorcolumn=100
+set mouse=a
 
 set splitright
 
 let mapleader = " "
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
-inoremap kj <Esc>
-map <C-m> :
 
 call plug#begin()
 Plug 'tpope/vim-fugitive'
@@ -25,24 +21,34 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-commentary'
 " plugins
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'plasticboy/vim-markdown'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'junegunn/limelight.vim'
+Plug 'goolord/alpha-nvim'
+Plug 'akinsho/bufferline.nvim'
+"Plug 'romgrk/barbar.nvim'
 "Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 "Plug 'nvim-lualine/lualine.nvim'
-"Plug 'lewis6991/gitsigns.nvim'
-Plug 'airblade/vim-gitgutter'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'tpope/vim-commentary'
-"Plug 'romgrk/barbar.nvim'
-" themes
+" themes.
 Plug 'morhetz/gruvbox'
+Plug 'Mofiqul/vscode.nvim'
 Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'romgrk/doom-one.vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
+" set background="dark"
+let g:vscode_style="dark"
 let g:gruvbox_italic=1
 colorscheme gruvbox
 "hi Normal guibg=NONE ctermbg=NONE
@@ -79,7 +85,8 @@ set shortmess+=c
 " diagnostics appear/become resolved.
 if has("nvim-0.5.0") || has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
+  " set signcolumn=number
+  set signcolumn=yes
 else
   set signcolumn=yes
 endif
@@ -251,12 +258,43 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
-"lua << END
-"require('gitsigns').setup()
-"END
+lua << END
+require('gitsigns').setup()
+require'alpha'.setup(require'alpha.themes.startify'.opts)
+require("bufferline").setup{}
+END
+" require('lualine').setup({
+" tabline = {
+"   lualine_a = {'buffers'},
+"   lualine_y = {
+"     {
+"       'diff',
+"       colored = true,
+"       diff_color = {
+"         added = nil,    -- changes diff's added color
+"         modified = nil, -- changes diff's modified color
+"         removed = nil,  -- changes diff's removed color
+"       },
+"       symbols = {added = '+', modified = '~', removed = '-'},
+"       source = nil
+"     }
+"   },
+"   lualine_z = {'branch'}
+"   }
+" })
 
 "telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" remaps
+nnoremap <leader>w :up<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>l <C-w>
+nnoremap <leader>bd :bd<CR>
+nnoremap <C-i> :bn<CR>
+nnoremap <C-b> :CtrlPBuffer<CR>
+nnoremap ; :
+inoremap kj <Esc>
+inoremap CC <Esc>bc$
