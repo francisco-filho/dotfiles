@@ -19,3 +19,4 @@ numlockx &
 #pulseaudio --start &
 #start-pulseaudio-x11 &
 export PATH=$PATH:$HOME/bin
+#export XDG_CONFIG_HOME=$HOME
