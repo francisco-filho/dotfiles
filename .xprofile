@@ -13,9 +13,11 @@ xrandr --output HDMI-2 --left-of DP-1
 # keyboard
 setxkbmap br &
 numlockx &
+localectl set-x11-keymap br pc105 "" ctrl:swapcaps
 
 
 # audio (iniciando no xmonad)
 #pulseaudio --start &
 #start-pulseaudio-x11 &
 export PATH=$PATH:$HOME/bin
+#export XDG_CONFIG_HOME=$HOME
