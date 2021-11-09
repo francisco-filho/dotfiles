@@ -12,7 +12,7 @@ compinit
 # End of lines added by compinstall
 
 # spaceship
-export SPACESHIP_PROMPT_SEPARATE_LINE=false
+export SPACESHIP_PROMPT_SEPARATE_LINE=true
 export SPACESHIP_CHAR_SYMBOL="› "
 
 autoload -U promptinit; promptinit
@@ -47,9 +47,10 @@ alias virsh="virsh --connect qemu:///system"
 alias activate="source venv/bin/activate"
 
 # path
+export IBM_CLOUD_HOME=$HOME/bin/IBM_Cloud_CLI
 export JAVA_HOME=/usr/lib/jvm/default
 export MAVEN_HOME=$HOME/opt/maven
-export PATH=$PATH:$HOME/bin:$MAVEN_HOME/bin
+export PATH=$PATH:$HOME/bin:$MAVEN_HOME/bin:$IBM_CLOUD_HOME
 #export XDG_CONFIG_HOME=$HOME
 
 # autostart
