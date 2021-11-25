@@ -33,6 +33,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'junegunn/limelight.vim'
 Plug 'goolord/alpha-nvim'
 Plug 'akinsho/bufferline.nvim'
+Plug 'mattn/emmet-vim'
 "Plug 'romgrk/barbar.nvim'
 "Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 "Plug 'nvim-lualine/lualine.nvim'
@@ -47,12 +48,15 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
-" set background="dark"
-let g:vscode_style="dark"
-let g:gruvbox_italic=1
-colorscheme gruvbox
-"hi Normal guibg=NONE ctermbg=NONE
 set termguicolors
+" set background="dark"
+"let g:vscode_style="dark"
+"let g:gruvbox_italic=1
+"let g:onedark_terminal_italics=1
+let g:nord_italic=1
+let g:nord_italic_comments=1
+colorscheme nord
+"hi Normal guibg=NONE ctermbg=NONE
 
 " CtrlP
 " let g:ctrlp_custom_ignore = '\v\.min\.(js|css)$\|node_modules'
