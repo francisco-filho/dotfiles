@@ -14,13 +14,14 @@ font:
     #family: SauceCodePro Nerd Font Mono
     #family: Lekton Nerd Font Mono
     #family: Monoid Nerd Font Mono
-        family: Fira Code Nerd Font Mono
+    #family: Fira Code Nerd Font Mono
+        family: VictorMono Nerd Font Mono
         style: Light
   bold:
         style: Bold
   italic:
-        family: Victor Mono
-  size: 16.0
+        family: VictorMono Nerd Font Mono
+  size: 17.0
   # offset:
   #   y: 8 
 draw_bold_text_with_bright_colors: true
