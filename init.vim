@@ -10,10 +10,10 @@ set mouse=a
 set splitright
 
 let mapleader = " "
+let g:user_emmet_leader_key = '<C-e>'
 
 call plug#begin()
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'othree/yajs.vim'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -36,7 +36,8 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'mattn/emmet-vim'
 "Plug 'romgrk/barbar.nvim'
 "Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
-"Plug 'nvim-lualine/lualine.nvim'
+" Plug 'vim-airline/vim-airline'
+Plug 'nvim-lualine/lualine.nvim'
 " themes.
 Plug 'morhetz/gruvbox'
 Plug 'Mofiqul/vscode.nvim'
@@ -46,6 +47,7 @@ Plug 'romgrk/doom-one.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 
 set termguicolors
@@ -55,7 +57,7 @@ set termguicolors
 "let g:onedark_terminal_italics=1
 let g:nord_italic=1
 let g:nord_italic_comments=1
-colorscheme nord
+colorscheme github_dimmed
 "hi Normal guibg=NONE ctermbg=NONE
 
 " CtrlP
@@ -266,26 +268,12 @@ lua << END
 require('gitsigns').setup()
 require'alpha'.setup(require'alpha.themes.startify'.opts)
 require("bufferline").setup{}
+require('lualine').setup({
+    options = {
+        theme = "github"
+    }
+  })
 END
-" require('lualine').setup({
-" tabline = {
-"   lualine_a = {'buffers'},
-"   lualine_y = {
-"     {
-"       'diff',
-"       colored = true,
-"       diff_color = {
-"         added = nil,    -- changes diff's added color
-"         modified = nil, -- changes diff's modified color
-"         removed = nil,  -- changes diff's removed color
-"       },
-"       symbols = {added = '+', modified = '~', removed = '-'},
-"       source = nil
-"     }
-"   },
-"   lualine_z = {'branch'}
-"   }
-" })
 
 "telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
