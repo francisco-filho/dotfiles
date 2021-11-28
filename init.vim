@@ -246,6 +246,7 @@ let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
 let g:NERDTreeDirArrowExpandable = "\uf460"
 let g:NERDTreeDirArrowCollapsible = "\uf47c"
+let g:NERDTreeShowHidden=1
 
 " treesitter
 lua <<EOF

@@ -7,6 +7,7 @@ setopt appendhistory
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/francisco/.zshrc'
 
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -51,7 +52,11 @@ export IBM_CLOUD_HOME=$HOME/bin/IBM_Cloud_CLI
 export JAVA_HOME=/usr/lib/jvm/default
 export MAVEN_HOME=$HOME/opt/maven
 export PATH=$PATH:$HOME/bin:$MAVEN_HOME/bin:$IBM_CLOUD_HOME
+export HADOOP_HOME=/opt/hadoop
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 #export XDG_CONFIG_HOME=$HOME
+#
+export PATH=$PATH:$HADOOP_HOME/bin
 
 # autostart
 neofetch
