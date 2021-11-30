@@ -6,8 +6,10 @@ set encoding=utf-8
 set cursorline
 set colorcolumn=100
 set mouse=a
-
+set list
+set listchars=eol:
 set splitright
+syntax enable
 
 let mapleader = " "
 
@@ -37,6 +39,7 @@ Plug 'akinsho/bufferline.nvim'
 "Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 "Plug 'nvim-lualine/lualine.nvim'
 " themes.
+Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 Plug 'Mofiqul/vscode.nvim'
 Plug 'joshdick/onedark.vim'
@@ -45,14 +48,15 @@ Plug 'romgrk/doom-one.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'whatyouhide/vim-gotham'
+Plug 'KabbAmine/yowish.vim'
 call plug#end()
 
 " set background="dark"
-let g:vscode_style="dark"
+let g:vscode_style="vscode"
 let g:gruvbox_italic=1
 colorscheme gruvbox
-"hi Normal guibg=NONE ctermbg=NONE
-set termguicolors
+let g:solarized_termcolors=256
 
 " CtrlP
 " let g:ctrlp_custom_ignore = '\v\.min\.(js|css)$\|node_modules'
@@ -125,7 +129,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gji <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
