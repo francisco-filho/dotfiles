@@ -9,18 +9,23 @@ window:
 font:
   normal:
     #family: Inconsolata Nerd Font Mono
-    #family: Consolas
+    #    family: Consolas
     #family: JetBrainsMono Nerd Font
     #family: SauceCodePro Nerd Font Mono
     #family: Lekton Nerd Font Mono
     #family: Monoid Nerd Font Mono
-        family: Fira Code Nerd Font Mono
+    #family: Fira Code Nerd Font Mono
+        family: VictorMono Nerd Font Mono
         style: Light
   bold:
         style: Bold
-  size: 16.0
+  italic:
+        family: VictorMono Nerd Font Mono
+  size: 17.0
+  # offset:
+  #   y: 8 
 draw_bold_text_with_bright_colors: true
-background_opacity: .85
+background_opacity: .9
 live_config_reload: true
 # colors
 # Colors (Dracula)

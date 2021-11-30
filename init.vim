@@ -12,10 +12,10 @@ set splitright
 syntax enable
 
 let mapleader = " "
+let g:user_emmet_leader_key = '<C-e>'
 
 call plug#begin()
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'othree/yajs.vim'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -35,9 +35,11 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'junegunn/limelight.vim'
 Plug 'goolord/alpha-nvim'
 Plug 'akinsho/bufferline.nvim'
+Plug 'mattn/emmet-vim'
 "Plug 'romgrk/barbar.nvim'
 "Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
-"Plug 'nvim-lualine/lualine.nvim'
+" Plug 'vim-airline/vim-airline'
+Plug 'nvim-lualine/lualine.nvim'
 " themes.
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
@@ -50,13 +52,22 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'whatyouhide/vim-gotham'
 Plug 'KabbAmine/yowish.vim'
+Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 
+set termguicolors
 " set background="dark"
 let g:vscode_style="vscode"
 let g:gruvbox_italic=1
 colorscheme gruvbox
 let g:solarized_termcolors=256
+"let g:vscode_style="dark"
+"let g:gruvbox_italic=1
+"let g:onedark_terminal_italics=1
+let g:nord_italic=1
+let g:nord_italic_comments=1
+colorscheme github_dimmed
+"hi Normal guibg=NONE ctermbg=NONE
 
 " CtrlP
 " let g:ctrlp_custom_ignore = '\v\.min\.(js|css)$\|node_modules'
@@ -244,6 +255,7 @@ let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
 let g:NERDTreeDirArrowExpandable = "\uf460"
 let g:NERDTreeDirArrowCollapsible = "\uf47c"
+let g:NERDTreeShowHidden=1
 
 " treesitter
 lua <<EOF
@@ -266,26 +278,12 @@ lua << END
 require('gitsigns').setup()
 require'alpha'.setup(require'alpha.themes.startify'.opts)
 require("bufferline").setup{}
+require('lualine').setup({
+    options = {
+        theme = "github"
+    }
+  })
 END
-" require('lualine').setup({
-" tabline = {
-"   lualine_a = {'buffers'},
-"   lualine_y = {
-"     {
-"       'diff',
-"       colored = true,
-"       diff_color = {
-"         added = nil,    -- changes diff's added color
-"         modified = nil, -- changes diff's modified color
-"         removed = nil,  -- changes diff's removed color
-"       },
-"       symbols = {added = '+', modified = '~', removed = '-'},
-"       source = nil
-"     }
-"   },
-"   lualine_z = {'branch'}
-"   }
-" })
 
 "telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
