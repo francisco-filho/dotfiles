@@ -40,6 +40,7 @@ Plug 'mattn/emmet-vim'
 "Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 " Plug 'vim-airline/vim-airline'
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'karb94/neoscroll.nvim'
 " themes.
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
@@ -62,11 +63,13 @@ let g:gruvbox_italic=1
 colorscheme gruvbox
 let g:solarized_termcolors=256
 "let g:vscode_style="dark"
-"let g:gruvbox_italic=1
+let g:gruvbox_italic=1
 "let g:onedark_terminal_italics=1
 let g:nord_italic=1
 let g:nord_italic_comments=1
-colorscheme github_dimmed
+let g:allow_bold=1
+let g:allow_italic=1
+colorscheme gruvbox
 "hi Normal guibg=NONE ctermbg=NONE
 
 " CtrlP
@@ -283,6 +286,7 @@ require('lualine').setup({
         theme = "github"
     }
   })
+require('neoscroll').setup()
 END
 
 "telescope
@@ -300,3 +304,6 @@ nnoremap <C-b> :CtrlPBuffer<CR>
 nnoremap ; :
 inoremap kj <Esc>
 inoremap CC <Esc>bc$
+
+" autocommands
+autocmd BufWritePost init.vim source $MYVIMRC
