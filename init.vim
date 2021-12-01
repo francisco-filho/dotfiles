@@ -15,6 +15,7 @@ let mapleader = " "
 let g:user_emmet_leader_key = '<C-e>'
 
 call plug#begin()
+" core
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'othree/yajs.vim'
@@ -37,9 +38,6 @@ Plug 'junegunn/limelight.vim'
 Plug 'goolord/alpha-nvim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'mattn/emmet-vim'
-"Plug 'romgrk/barbar.nvim'
-"Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
-" Plug 'vim-airline/vim-airline'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'karb94/neoscroll.nvim'
 " themes.
