@@ -1,6 +1,8 @@
 env:
   TERM: xterm-256color
 startup_mode: Fullscreen
+shell:
+  program: /bin/zsh
 window:
   padding:
     x: 0
@@ -21,11 +23,11 @@ font:
         style: Bold
   italic:
         family: VictorMono Nerd Font Mono
-  size: 17.0
+  size: 14.0
   # offset:
   #   y: 8 
 draw_bold_text_with_bright_colors: true
-background_opacity: .9
+background_opacity: .95
 live_config_reload: true
 # colors
 # Colors (Dracula)

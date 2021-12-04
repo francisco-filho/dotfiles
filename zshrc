@@ -15,6 +15,7 @@ compinit
 # spaceship
 export SPACESHIP_PROMPT_SEPARATE_LINE=true
 export SPACESHIP_CHAR_SYMBOL="› "
+export SPACESHIP_VI_MODE_SHOW=false
 
 autoload -U promptinit; promptinit
 prompt spaceship
@@ -58,5 +59,7 @@ export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 #
 export PATH=$PATH:$HADOOP_HOME/bin
 
+export EDITOR=nvim
+
 # autostart
-neofetch
+#neofetch
