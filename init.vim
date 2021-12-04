@@ -40,8 +40,13 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'mattn/emmet-vim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'karb94/neoscroll.nvim'
+"Plug 'romgrk/barbar.nvim'
+"Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+" Plug 'vim-airline/vim-airline'
 " themes.
-Plug 'altercation/vim-colors-solarized'
+Plug 'sainnhe/sonokai'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'savq/melange'
 Plug 'morhetz/gruvbox'
 Plug 'Mofiqul/vscode.nvim'
 Plug 'joshdick/onedark.vim'
@@ -59,7 +64,6 @@ set termguicolors
 " set background="dark"
 let g:vscode_style="vscode"
 let g:gruvbox_italic=1
-colorscheme gruvbox
 let g:solarized_termcolors=256
 "let g:vscode_style="dark"
 let g:gruvbox_italic=1
@@ -68,6 +72,7 @@ let g:nord_italic=1
 let g:nord_italic_comments=1
 let g:allow_bold=1
 let g:allow_italic=1
+let g:sonokai_style='sushia'
 colorscheme gruvbox
 "hi Normal guibg=NONE ctermbg=NONE
 
@@ -282,7 +287,7 @@ require'alpha'.setup(require'alpha.themes.startify'.opts)
 require("bufferline").setup{}
 require('lualine').setup({
     options = {
-        theme = "github"
+        theme = "gruvbox"
     }
   })
 require('neoscroll').setup()

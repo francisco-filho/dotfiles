@@ -1,0 +1,54 @@
+syntax on
+syntax enable
+colorscheme koehler
+set nocompatible
+set splitright
+set mouse=a
+
+" indentation
+set modelines=0
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" Mode stuff
+set history=50
+set encoding=utf-8
+set scrolloff=3
+set ai
+set autoindent
+set autoread
+set si
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set ttyfast
+set ruler
+set foldmethod=marker
+set number
+
+" movement
+set ignorecase
+set smartcase
+set showmatch
+
+set nowrap
+
+" mappings
+let mapleader=" "
+
+" remaps
+nnoremap <leader>w :up<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>l <C-w>
+nnoremap <leader>bd :bd<CR>
+nnoremap <C-i> :bn<CR>
+nnoremap ; :
+inoremap kj <Esc>
+inoremap CC <Esc>bc$
+
