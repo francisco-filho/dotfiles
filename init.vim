@@ -5,7 +5,7 @@ set expandtab
 set encoding=utf-8
 set cursorline
 set colorcolumn=100
-set mouse=a
+set mouse=v
 set list
 set listchars=eol:
 set splitright
@@ -27,6 +27,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 " plugins
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
@@ -44,6 +45,7 @@ Plug 'karb94/neoscroll.nvim'
 "Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 " Plug 'vim-airline/vim-airline'
 " themes.
+Plug 'lifepillar/vim-solarized8'
 Plug 'sainnhe/sonokai'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'savq/melange'
@@ -61,11 +63,11 @@ Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 
 set termguicolors
-" set background="dark"
+set background=dark
 let g:vscode_style="vscode"
 let g:gruvbox_italic=1
-let g:solarized_termcolors=256
-"let g:vscode_style="dark"
+" let g:solarized_termcolors=256
+let g:vscode_style="dark"
 let g:gruvbox_italic=1
 "let g:onedark_terminal_italics=1
 let g:nord_italic=1
@@ -73,7 +75,8 @@ let g:nord_italic_comments=1
 let g:allow_bold=1
 let g:allow_italic=1
 let g:sonokai_style='sushia'
-colorscheme gruvbox
+colorscheme vscode
+let g:Hexokinase_highlighters = ['background']
 "hi Normal guibg=NONE ctermbg=NONE
 
 " CtrlP
@@ -287,7 +290,7 @@ require'alpha'.setup(require'alpha.themes.startify'.opts)
 require("bufferline").setup{}
 require('lualine').setup({
     options = {
-        theme = "gruvbox"
+        theme = "vscode"
     }
   })
 require('neoscroll').setup()
@@ -306,8 +309,11 @@ nnoremap <leader>bd :bd<CR>
 nnoremap <C-i> :bn<CR>
 nnoremap <C-b> :CtrlPBuffer<CR>
 nnoremap ; :
+nnoremap <leader>gsr :source %<CR>
 inoremap kj <Esc>
 inoremap CC <Esc>bc$
 
 " autocommands
 autocmd BufWritePost init.vim source $MYVIMRC
+autocmd BufRead *.md set nofoldenable
+
