@@ -21,6 +21,7 @@ autoload -U promptinit; promptinit
 prompt spaceship
 
 # keys
+bindkey -e
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
@@ -52,14 +53,13 @@ alias activate="source venv/bin/activate"
 export IBM_CLOUD_HOME=$HOME/bin/IBM_Cloud_CLI
 export JAVA_HOME=/usr/lib/jvm/default
 export MAVEN_HOME=$HOME/opt/maven
-export PATH=$PATH:$HOME/bin:$MAVEN_HOME/bin:$IBM_CLOUD_HOME
 export HADOOP_HOME=/opt/hadoop
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
-#export XDG_CONFIG_HOME=$HOME
-#
-export PATH=$PATH:$HADOOP_HOME/bin
-
+export SPARK_HOME=$HOME/opt/spark
 export EDITOR=nvim
+
+export PATH=$PATH:$HOME/bin:$MAVEN_HOME/bin:$IBM_CLOUD_HOME
+export PATH=$PATH:$HADOOP_HOME/bin:$SPARK_HOME/bin
 
 # autostart
 #neofetch
