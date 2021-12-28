@@ -1,4 +1,4 @@
-#
+# history configuration
 HISTFILE=$HOME/.zhistory
 HISTSIZE=1000
 SAVEHIST=1000
@@ -61,5 +61,5 @@ export EDITOR=nvim
 export PATH=$PATH:$HOME/bin:$MAVEN_HOME/bin:$IBM_CLOUD_HOME
 export PATH=$PATH:$HADOOP_HOME/bin:$SPARK_HOME/bin
 
-# autostart
+#autostart
 #neofetch

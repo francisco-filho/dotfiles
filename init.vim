@@ -43,8 +43,10 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'karb94/neoscroll.nvim'
 "Plug 'romgrk/barbar.nvim'
 "Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
-" Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
 " themes.
+Plug 'sainnhe/gruvbox-material'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'lifepillar/vim-solarized8'
 Plug 'sainnhe/sonokai'
 Plug 'EdenEast/nightfox.nvim'
@@ -71,13 +73,15 @@ let g:vscode_style="dark"
 let g:gruvbox_italic=1
 "let g:onedark_terminal_italics=1
 let g:nord_italic=1
+let g:dracula_italic=1
 let g:nord_italic_comments=1
 let g:allow_bold=1
 let g:allow_italic=1
 let g:sonokai_style='sushia'
-colorscheme vscode
+let g:dracula_full_special_attrs_support = 1
+colorscheme gruvbox-material
 let g:Hexokinase_highlighters = ['background']
-"hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 
 " CtrlP
 " let g:ctrlp_custom_ignore = '\v\.min\.(js|css)$\|node_modules'
@@ -85,24 +89,16 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 
 
 " NEOVIM
-
-" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
-
 " TextEdit might fail if hidden is not set.
 set hidden
-
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
 
-" Give more space for displaying messages.
-set cmdheight=1
-
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
-
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
@@ -287,12 +283,18 @@ EOF
 lua << END
 require('gitsigns').setup()
 require'alpha'.setup(require'alpha.themes.startify'.opts)
-require("bufferline").setup{}
+require("bufferline").setup{
+   options = {
+       indicator_icon = "",
+   }
+}
 require('lualine').setup({
     options = {
-        theme = "vscode"
-    }
-  })
+        theme = 'auto',
+        component_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
+    } 
+})
 require('neoscroll').setup()
 END
 
@@ -312,8 +314,8 @@ nnoremap ; :
 nnoremap <leader>gsr :source %<CR>
 inoremap kj <Esc>
 inoremap CC <Esc>bc$
+vnoremap <leader>y "+y
 
 " autocommands
 autocmd BufWritePost init.vim source $MYVIMRC
 autocmd BufRead *.md set nofoldenable
-
