@@ -12,12 +12,21 @@ keymap("i", "kj", "<Esc>", options)
 keymap("i", "jk", "<Esc>", options)
 keymap("v", "<leader>y", [["+y]], options)
 keymap("n", "<leader>bd", ":bd<cr>", options)
+keymap("n", "<leader>p", ":bprevious<cr>", options)
+keymap("n", "<leader>n", ":bnext<cr>", options)
 
 -- window navigation
 keymap("n", "<C-h>", "<C-w>h", options)
 keymap("n", "<C-j>", "<C-w>j", options)
 keymap("n", "<C-k>", "<C-w>k", options)
 keymap("n", "<C-l>", "<C-w>l", options)
+
+-- telescope
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", options)
+keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", options)
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", options)
+keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", options)
+
 
 --nnoremap <leader>w :up<CR>
 --nnoremap <leader>q :q<CR>

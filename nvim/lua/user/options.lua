@@ -1,4 +1,4 @@
-opt = vim.opt
+local opt = vim.opt
 
 opt.number=true
 opt.tabstop=4
@@ -10,6 +10,7 @@ opt.colorcolumn="100"
 opt.mouse="v"
 opt.splitright=true
 opt.signcolumn="yes"
+opt.termguicolors=true
 
 vim.cmd [[set list]]
 --vim.cmd [[listchars=eol:]]

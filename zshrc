@@ -52,14 +52,23 @@ alias activate="source venv/bin/activate"
 # path
 export IBM_CLOUD_HOME=$HOME/bin/IBM_Cloud_CLI
 export JAVA_HOME=/usr/lib/jvm/default
-export MAVEN_HOME=$HOME/opt/maven
+export MAVEN_HOME=$HOME/opt/apache-maven-3.8.4
 export HADOOP_HOME=/opt/hadoop
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export SPARK_HOME=$HOME/opt/spark
 export EDITOR=nvim
+export LUA_LSP_SERVER=/home/francisco/repos/lua-language-server
 
 export PATH=$PATH:$HOME/bin:$MAVEN_HOME/bin:$IBM_CLOUD_HOME
 export PATH=$PATH:$HADOOP_HOME/bin:$SPARK_HOME/bin
+export PATH=$PATH:$LUA_LSP_SERVER/bin
 
 #autostart
 #neofetch
+
+alias luamake=/home/francisco/repos/lua-language-server/3rd/luamake/luamake
+
+# fzf
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --preview-window up'
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh

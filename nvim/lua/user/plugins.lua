@@ -3,7 +3,7 @@ local fn = vim.fn
 -- instalação automática do packer
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  Packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
 local packer = require('packer').startup(function(use)
@@ -15,6 +15,7 @@ local packer = require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-treesitter/nvim-treesitter'
+  use 'akinsho/bufferline.nvim'
 
   -- nvim com
   use 'neovim/nvim-lspconfig'
@@ -31,7 +32,7 @@ local packer = require('packer').startup(function(use)
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
-  if packer_bootstrap then
+  if Packer_bootstrap then
     require('packer').sync()
   end
 end)
@@ -44,5 +45,14 @@ require('lualine').setup({
         section_separators = { left = '', right = ''},
     }
 })
+
+require('telescope').setup{}
+require("bufferline").setup{
+   options = {
+       numbers = "ordinal",
+       diagnostics = "nvim_lsp",
+       separator_style = "slant"
+   }
+}
 
 return packer
