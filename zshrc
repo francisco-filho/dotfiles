@@ -48,6 +48,7 @@ alias spyder="GTK_THEME=\"Adwaita\" spyder"
 alias vmware="GTK_THEME=\"Adwaita\" vmware-view"
 alias virsh="virsh --connect qemu:///system"
 alias activate="source venv/bin/activate"
+alias cat="bat --theme zenburn"
 
 # path
 export IBM_CLOUD_HOME=$HOME/bin/IBM_Cloud_CLI
@@ -58,10 +59,11 @@ export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export SPARK_HOME=$HOME/opt/spark
 export EDITOR=nvim
 export LUA_LSP_SERVER=/home/francisco/repos/lua-language-server
+export SCRIPT_HOME=$HOME/repos/scripts
 
 export PATH=$PATH:$HOME/bin:$MAVEN_HOME/bin:$IBM_CLOUD_HOME
 export PATH=$PATH:$HADOOP_HOME/bin:$SPARK_HOME/bin
-export PATH=$PATH:$LUA_LSP_SERVER/bin
+export PATH=$PATH:$LUA_LSP_SERVER/bin:$SCRIPT_HOME
 
 #autostart
 #neofetch
@@ -69,6 +71,9 @@ export PATH=$PATH:$LUA_LSP_SERVER/bin
 alias luamake=/home/francisco/repos/lua-language-server/3rd/luamake/luamake
 
 # fzf
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --preview-window up'
+#export FZF_DEFAULT_OPTS='--height 80% --layout=reverse --border --preview-window down'
+export FZF_DEFAULT_OPTS="--height 90% --layout=reverse --border --preview-window down --preview 'bat --color=always --style=numbers  {}' --bind='ctrl-o:execute:nvim {}'"
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+#fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'
+#fzf --bind="ctrl-o:execute:nvim  {}"

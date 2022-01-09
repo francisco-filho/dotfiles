@@ -27,6 +27,9 @@ keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", options)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", options)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", options)
 
+-- bufferline
+keymap("n", "gb", "<cmd>BufferLinePick<cr>", options)
+
 
 --nnoremap <leader>w :up<CR>
 --nnoremap <leader>q :q<CR>
