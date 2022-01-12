@@ -16,6 +16,7 @@ local packer = require('packer').startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-treesitter/nvim-treesitter'
   use 'akinsho/bufferline.nvim'
+  use 'mattn/emmet-vim'
 
   -- nvim com
   use 'neovim/nvim-lspconfig'

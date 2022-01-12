@@ -23,3 +23,5 @@ vim.cmd [[autocmd BufRead *.md set nofoldenable]]
 
 -- colorscheme
 vim.cmd 'colorscheme gruvbox-material'
+
+vim.cmd 'autocmd FileType typescript setlocal ts=2 sts=2 sw=2'

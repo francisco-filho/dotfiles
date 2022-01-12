@@ -71,8 +71,8 @@ export PATH=$PATH:$LUA_LSP_SERVER/bin:$SCRIPT_HOME
 alias luamake=/home/francisco/repos/lua-language-server/3rd/luamake/luamake
 
 # fzf
-#export FZF_DEFAULT_OPTS='--height 80% --layout=reverse --border --preview-window down'
-export FZF_DEFAULT_OPTS="--height 90% --layout=reverse --border --preview-window down --preview 'bat --color=always --style=numbers  {}' --bind='ctrl-o:execute:nvim {}'"
+export FZF_DEFAULT_OPTS='--height 80% --layout=reverse --border --preview-window down'
+#export FZF_DEFAULT_OPTS="--height 90% --layout=reverse --border --preview-window down --preview 'bat --color=always --style=numbers  {}' --bind='ctrl-o:execute:nvim {}'"
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 #fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'
