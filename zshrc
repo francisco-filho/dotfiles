@@ -77,3 +77,7 @@ source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 #fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'
 #fzf --bind="ctrl-o:execute:nvim  {}"
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
