@@ -11,6 +11,7 @@ opt.mouse="v"
 opt.splitright=true
 opt.signcolumn="yes"
 opt.termguicolors=true
+opt.background="dark"
 
 vim.cmd [[set list]]
 --vim.cmd [[listchars=eol:]]

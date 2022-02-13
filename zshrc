@@ -33,7 +33,7 @@ bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
 
 # alias
-export LS="lsd"
+export LS="ls --color"
 alias ls="$LS"
 alias ll="$LS -alF"
 alias la="$LS -A"
@@ -73,11 +73,21 @@ alias luamake=/home/francisco/repos/lua-language-server/3rd/luamake/luamake
 # fzf
 export FZF_DEFAULT_OPTS='--height 80% --layout=reverse --border --preview-window down'
 #export FZF_DEFAULT_OPTS="--height 90% --layout=reverse --border --preview-window down --preview 'bat --color=always --style=numbers  {}' --bind='ctrl-o:execute:nvim {}'"
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+if [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
+	source /usr/share/fzf/key-bindings.zsh
+	source /usr/share/fzf/completion.zsh
+elif [[ -f /etc/zsh_completion.d/fzf-key-bindings ]]; then
+    source /etc/zsh_completion.d/fzf-key-bindings
+fi
 #fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'
 #fzf --bind="ctrl-o:execute:nvim  {}"
 
 # Add JBang to environment
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+tm shell
