@@ -1,7 +1,7 @@
 # history configuration
 HISTFILE=$HOME/.zhistory
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt appendhistory
 
 # The following lines were added by compinstall
@@ -49,6 +49,7 @@ alias vmware="GTK_THEME=\"Adwaita\" vmware-view"
 alias virsh="virsh --connect qemu:///system"
 alias activate="source venv/bin/activate"
 alias cat="bat --theme zenburn"
+alias zy="sudo zypper"
 
 # path
 export IBM_CLOUD_HOME=$HOME/bin/IBM_Cloud_CLI
