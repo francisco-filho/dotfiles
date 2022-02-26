@@ -5,7 +5,7 @@ shell:
   program: /bin/zsh
 window:
   startup_mode: Fullscreen
-  paddin:
+  padding:
     x: 0
     y: 0 
   decorations: full
@@ -18,7 +18,9 @@ font:
     #family: SauceCodePro Nerd Font Mono
     #family: Lekton Nerd Font Mono
     #family: Monoid Nerd Font Mono
-        family: FiraCode Nerd Font Mono
+    #family: FiraCode Nerd Font Mono
+        family: Fira Code
+          #family: monospace
         # family: VictorMono Nerd Font Mono
         style: Light
   bold:
@@ -27,7 +29,7 @@ font:
         family: VictorMono Nerd Font Mono
   italic:
         family: VictorMono Nerd Font Mono
-  size: 24.0
+  size: 18.0
   # offset:
   #   y: 8 
 draw_bold_text_with_bright_colors: true

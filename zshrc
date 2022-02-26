@@ -48,12 +48,14 @@ alias spyder="GTK_THEME=\"Adwaita\" spyder"
 alias vmware="GTK_THEME=\"Adwaita\" vmware-view"
 alias virsh="virsh --connect qemu:///system"
 alias activate="source venv/bin/activate"
-alias cat="bat --theme zenburn"
+alias cat="bat --theme=gruvbox-dark"
 alias zy="sudo zypper"
+alias lgit="lazygit"
 
 # path
 export IBM_CLOUD_HOME=$HOME/bin/IBM_Cloud_CLI
 export JAVA_HOME=/usr/lib64/jvm/java-11-openjdk
+#export JAVA_HOME=/usr/lib64/jvm/jre-1.8.0-openjdk
 export MAVEN_HOME=$HOME/opt/apache-maven-3.8.4
 export HADOOP_HOME=/opt/hadoop
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
@@ -87,6 +89,9 @@ fi
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
 
+# k8s
+source <(kubectl completion zsh)
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -95,6 +100,9 @@ export NVM_DIR="$HOME/.nvm"
 if [[ -z $(which kubectl) ]]; then
     source <(kubectl completion zsh)
 fi
+# bb
+export OPENSSL_CONF=/etc/ssl
+export TMUXP_CONFIGDIR=$HOME/repos/scripts/tmuxp
 
 tm shell
 
