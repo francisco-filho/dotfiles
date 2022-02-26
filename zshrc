@@ -53,7 +53,7 @@ alias zy="sudo zypper"
 
 # path
 export IBM_CLOUD_HOME=$HOME/bin/IBM_Cloud_CLI
-export JAVA_HOME=/usr/lib/jvm/default
+export JAVA_HOME=/usr/lib64/jvm/java-11-openjdk
 export MAVEN_HOME=$HOME/opt/apache-maven-3.8.4
 export HADOOP_HOME=/opt/hadoop
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
@@ -90,6 +90,11 @@ export PATH="$HOME/.jbang/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# k8s
+if [[ -z $(which kubectl) ]]; then
+    source <(kubectl completion zsh)
+fi
 
 tm shell
 
