@@ -32,6 +32,7 @@ local packer = require('packer').startup(function(use)
   use 'sainnhe/gruvbox-material'
   use 'mhartington/oceanic-next'
   use 'tomasiser/vim-code-dark'
+  use 'rakr/vim-one'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

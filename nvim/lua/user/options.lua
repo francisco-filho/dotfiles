@@ -23,6 +23,6 @@ vim.cmd [[set completeopt=menu,menuone,noselect]]
 vim.cmd [[autocmd BufRead *.md set nofoldenable]]
 
 -- colorscheme
-vim.cmd 'colorscheme gruvbox-material'
+vim.cmd 'colorscheme one'
 
 vim.cmd 'autocmd FileType typescript setlocal ts=2 sts=2 sw=2'
