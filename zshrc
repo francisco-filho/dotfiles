@@ -89,17 +89,14 @@ fi
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
 
-# k8s
-source <(kubectl completion zsh)
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # k8s
-if [[ -z $(which kubectl) ]]; then
-    source <(kubectl completion zsh)
-fi
+#if [[ -z $(which kubectl) ]]; then
+#    source <(kubectl completion zsh)
+#fi
 # bb
 export OPENSSL_CONF=/etc/ssl
 export TMUXP_CONFIGDIR=$HOME/repos/scripts/tmuxp
